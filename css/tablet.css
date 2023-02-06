@@ -1,0 +1,130 @@
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .header .top-wrapper,
+  .header .close-menu,
+  .header .soc-list {
+    display: none;
+  }
+
+  .header .inner .navigation {
+    margin-right: auto;
+  }
+
+  .header .wrapper .logo {
+    display: block;
+    margin-right: 123px;
+  }
+
+  .header .logo,
+  .navigation .link {
+    padding: 24px 0 22px;
+  }
+
+  .menu-list .link {
+    position: relative;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .menu-list .active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: var(--link-color-blue);
+    border-radius: 2px;
+  }
+
+  .header .contacts-list {
+    flex-direction: column;
+    gap: 4px;
+    padding: 24px 0 10px;
+  }
+
+  .contacts-list .link {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+  }
+
+  .solutions {
+    background: var(--bg-gradient),
+      url(../images/solutions-bg-img-tab.jpg) center;
+    background-size: cover;
+    padding: 112px 0 108px;
+    max-width: 768px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .solutions {
+      background-image: var(--bg-gradient),
+        url(../images/solutions-bg-img-tab-2x.jpg);
+    }
+  }
+
+  .solutions .title {
+    font-size: 56px;
+    line-height: 1.07;
+    width: 495.5px;
+  }
+
+  .advantages .list,
+  .costumers .list,
+  .footer .box {
+    gap: 72px 24px;
+  }
+
+  .advantages .list-item {
+    flex-basis: calc(50% - 12px);
+  }
+
+  .advantages .list .title {
+    text-align: left;
+  }
+
+  .team {
+    padding: 96px 0 104px;
+  }
+
+  .team .list {
+    gap: 64px 24px;
+  }
+
+  .costumers .list-item {
+    flex-basis: 0;
+  }
+
+  .costumers .link {
+    padding: 13px 31px;
+  }
+
+  .footer .box {
+    width: 558px;
+    justify-content: start;
+  }
+
+  .footer .logo {
+    margin: 0 0 16px 0;
+  }
+
+  .footer .title {
+    text-align: left;
+  }
+
+  .footer .content,
+  .footer .form .inpt {
+    width: 264px;
+  }
+
+  .modal {
+    padding: 72px 24px 24px;
+    width: 408px;
+  }
+}

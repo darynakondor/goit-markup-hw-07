@@ -1,0 +1,100 @@
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1158px;
+  }
+
+  .header {
+    height: 76px;
+  }
+
+  .header .logo {
+    margin-right: 76px;
+  }
+
+  .header .logo,
+  .header .link {
+    padding: 24px 0 28px;
+  }
+
+  .header .contacts-list {
+    gap: 40px;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .contacts-list .link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .solutions {
+    background: var(--bg-gradient),
+      url(../images/solutions-bg-img-desc.jpg) center;
+    background-size: cover;
+    padding: 188px 0;
+    max-width: 1440px;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .solutions {
+      background-image: var(--bg-gradient),
+        url(../images/solutions-bg-img-desc-2x.jpg);
+    }
+  }
+
+  .advantages {
+    padding-top: 120px;
+  }
+
+  .advantages .list {
+    gap: 24px;
+  }
+
+  .advantages .list-item {
+    flex-basis: calc(25% - 18px);
+  }
+
+  .advantages .wrapper-icon {
+    display: block;
+    background: var(--icon-wrapper-color);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 24px 0;
+    text-align: center;
+  }
+
+  .advantages .list .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  .team {
+    padding: 120px 0;
+  }
+
+  .footer {
+    padding: 100px 0;
+  }
+
+  .footer .box {
+    gap: 0;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .footer .content {
+    margin-right: 120px;
+  }
+
+  .footer .social-media {
+    margin-right: 80px;
+  }
+
+  .footer .subscribe .form {
+    flex-wrap: nowrap;
+  }
+}

@@ -72,7 +72,7 @@ body {
 }
 
 .container {
-  max-width: 1158px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -95,18 +95,15 @@ body {
 .header {
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-  height: 76px;
+  height: 70px;
 }
 
-.box,
+.header .top-wrapper .box,
+.header .wrapper .inner,
+.footer .box,
 .navigation,
 .list {
   display: flex;
-}
-
-.navigation {
-  align-items: center;
-  margin-right: auto;
 }
 
 .logo {
@@ -120,47 +117,21 @@ body {
   text-decoration: none;
 }
 
-.navigation .logo {
-  margin-right: 76px;
-}
-
 .part-logo {
   color: var(--part-logo-color);
 }
 
-.header .logo,
-.header .link {
-  padding: 24px 0 28px;
-}
-
-.menu-list,
-.contacts-list {
+.menu-list {
   gap: 40px;
 }
 
 .menu-list .link {
-  position: relative;
-  font-weight: 500;
-  line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--nav-link-color);
   transition: color var(--transition);
 }
 
-.menu-list .active::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: var(--link-color-blue);
-  border-radius: 2px;
-}
-
 .contacts-list .link {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--text-color);
   transition: color var(--transition);
 }
@@ -173,22 +144,38 @@ body {
   color: var(--link-color-blue);
 }
 
+.header .soc-list .link {
+  background: var(--icon-bg);
+  transition: background-color var(--transition);
+}
+
+.header .soc-list .link:hover,
+.header .soc-list .link:focus {
+  background: var(--link-color-blue);
+}
+
 .solutions {
-  background: var(--bg-gradient), url(../images/solutions-bg-img.jpg) center;
+  background: var(--bg-gradient), url(../images/solutions-bg-img-mob.jpg) center;
   background-size: cover;
   text-align: center;
-  padding: 188px 0;
-  max-width: 1440px;
+  padding: 112px 0;
+  max-width: 428px;
   margin: 0 auto;
 }
 
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .solutions {
+    background-image: var(--bg-gradient), url(../images/solutions-bg-img-mob-2x.jpg);
+  }
+}
+
 .solutions .title {
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--color-white);
-  margin: 0 auto 48px;
-  width: 495.05px;
+  margin: 0 auto 72px;
+  width: 318.25px;
 }
 
 .solutions .btn {
@@ -227,34 +214,37 @@ body {
 }
 
 .advantages {
-  padding-top: 120px;
+  padding: 96px 0;
 }
 
 .advantages .list-item {
-  flex-basis: calc(25% - 18px);
+  width: 100%;
 }
 
 .advantages .list,
-.projects .list,
-.team .list,
-.costumers .list,
-.portfolio .btns-list {
-  gap: 24px;
+.team .list, .footer .box {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .advantages .wrapper-icon {
-  background: var(--icon-wrapper-color);
-  border-radius: 4px;
-  margin-bottom: 8px;
-  padding: 24px 0;
-  text-align: center;
+  display: none;
 }
 
 .advantages .list .title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
   margin-bottom: 8px;
+  text-align: center;
 }
 
-.advantages .list .title,
+.advantages .list .text {
+  font-weight: 500;
+}
+
 .team .list .title,
 .portfolio-list .title, .modal .title {
   font-weight: 500;
@@ -270,10 +260,9 @@ body {
 }
 
 .projects {
-  padding: 120px 0;
+  display: none;
 }
 
-.projects .title,
 .team .title, .costumers .title {
   font-size: 36px;
   line-height: 1.11;
@@ -285,8 +274,9 @@ body {
 
 .team {
   background: var(--bg-color-light);
-  padding: 120px 0;
+  padding: 96px 0 128px;
 }
+
 
 .team .list-item {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -301,6 +291,7 @@ body {
 
 .team .icons-list {
   justify-content: center;
+  gap: 24px;
 }
 
 .team .icons-list .list-item {
@@ -318,7 +309,7 @@ body {
   background: var(--link-color-blue);
 }
 
-.team .caption .icon, .footer .social-media .icon {
+.team .caption .icon, .footer .social-media .icon, .header .soc-list .icon {
   display: inherit;
 }
 
@@ -331,16 +322,22 @@ body {
 }
 
 .costumers {
-  padding: 130px 0 120px;
+  padding: 96px 0;
+}
+
+.costumers .list {
+  gap: 72px 16px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .costumers .list-item {
-  flex-basis: calc(16.66667% - 20px);
+  flex-basis: calc(50% - 8px);
 }
 
 .costumers .link {
   text-align: center;
-  padding: 16px 0;
+  padding: 13px 0;
   border: 1px solid var(--customers-link-color);
   border-radius: 4px;
   transition: border-color var(--transition);
@@ -447,20 +444,19 @@ body {
 
 .footer {
   background: var(--bg-color-dark);
-  padding: 100px 0;
+  padding: 96px 0;
 }
 
 .footer .content {
-  width: 264px;
-  margin-right: 120px;
+  width: 268px;
 }
 
 .footer .logo {
   display: block;
-  width: 115px;
-  line-height: 1.17;
+  width: 126px;
+  line-height: 1.24;
   color: var(--footer-logo-color);
-  margin-bottom: 16px;
+  margin: 0 auto 16px;
 }
 
 .footer .text {
@@ -474,20 +470,20 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
-}
-
-.footer .social-media {
-  margin-right: 80px;
+  text-align: center;
 }
 
 .footer .social-media .list {
   gap: 16px;
 }
 
+.footer .social-media .link, .header .soc-list .link {
+  border-radius: 50%;
+  padding: 8px;
+}
+
 .footer .social-media .link {
   background: var(--footer-bg-icons);
-  border-radius: 50%;
-  padding: 12px;
   transition: background-color var(--transition);
 }
 
@@ -499,6 +495,8 @@ body {
 .footer .subscribe .form {
   display: flex;
   gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer .subscribe .inpt {
@@ -507,6 +505,7 @@ body {
   border-radius: 4px;
   background: transparent;
   padding: 9.8px 16px;
+  flex-grow: 1;
   color: var(--color-white);
 }
 
@@ -548,12 +547,11 @@ body {
   left: 50%;
   transform: translate(-50%, -50%) scale(1) rotate(0);
   transition: transform var(--transition);
-  width: 408px;
   min-height: 576px;
   background: var(--modal-bg-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 72px 24px 24px;
+  overflow: hidden;
 }
 
 .backdrop.is-hidden .modal {
@@ -564,6 +562,9 @@ body {
   position: absolute;
   top: 24px;
   right: 24px;
+}
+
+.modal>.btn, .header .close-menu {
   display: block;
   padding: 7px;
   border-radius: 50%;
@@ -579,7 +580,7 @@ body {
   border-color: var(--btn-active);
 }
 
-.modal .btn .icon {
+.modal .btn .icon, .header .close-menu .icon {
   display: block;
 }
 
