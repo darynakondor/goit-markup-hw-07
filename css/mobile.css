@@ -1,6 +1,24 @@
-@media screen and (min-width: 448px) {
+@media screen and (max-width: 447.98px) {
+    .contacts-list .list-item:last-child .link {
+        font-size: calc(25px + (22 * 0.7) * ((100vw - 320px) / 448));
+    }
+
+    .modal {
+        width: 91.58888%;
+    }
+}
+
+@media screen and (min-width: 448px) and (max-width: 767.98px) {
   .container {
     max-width: 428px;
+  }
+
+  .contacts-list .list-item:last-child .link {
+    font-size: 36px;
+  }
+
+  .modal {
+    width: 392px;
   }
 }
 
@@ -37,8 +55,9 @@
 
   .header .wrapper .box {
     position: relative;
-    padding: 80px 40px 40px;
+    padding-top: 80px;
     height: 100%;
+    padding: 80px 40px 40px;
   }
 
   .header .wrapper .close-menu {
@@ -60,10 +79,12 @@
     flex-direction: column;
   }
 
-  .menu-list .link,
-  .contacts-list .list-item:last-child .link {
-    font-weight: 700;
+  .menu-list .link {
     font-size: 36px;
+  }
+
+  .menu-list .link, .contacts-list .list-item:last-child .link {
+    font-weight: 700;
     line-height: 1.11;
   }
 
@@ -85,6 +106,10 @@
     letter-spacing: 0.02em;
   }
 
+  .contacts-list .link {
+    display: inline;
+  }
+
   .contacts-list .link:hover,
   .contacts-list .link:focus {
     color: var(--btn-color);
@@ -100,8 +125,7 @@
   }
 
   .modal {
-    padding: 72px 16px 16px;
-    width: 396px;
+    padding: 72px 16px 24px;
   }
 
   .is-hidden-menu {

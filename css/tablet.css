@@ -105,6 +105,22 @@
     padding: 13px 31px;
   }
 
+  .portfolio {
+    padding: 64px 0 96px;
+  }
+
+  .portfolio .btns-list {
+    margin-bottom: 64px;
+  }
+
+  .portfolio .btns-list {
+    justify-content: center;
+  }
+
+  .portfolio .portfolio-list {
+    justify-content: start;
+  }
+
   .footer .box {
     width: 558px;
     justify-content: start;

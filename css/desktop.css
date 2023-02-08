@@ -30,7 +30,7 @@
 
   .solutions {
     background: var(--bg-gradient),
-      url(../images/solutions-bg-img-desc.jpg) center;
+      url(../images/solutions-bg-img-desk.jpg) center;
     background-size: cover;
     padding: 188px 0;
     max-width: 1440px;
@@ -41,7 +41,7 @@
     (min-resolution: 2dppx) {
     .solutions {
       background-image: var(--bg-gradient),
-        url(../images/solutions-bg-img-desc-2x.jpg);
+        url(../images/solutions-bg-img-desk-2x.jpg);
     }
   }
 
@@ -72,8 +72,38 @@
     line-height: 1.2;
   }
 
-  .team {
+  .advantages .list .text {
+    font-weight: 400;
+  }
+
+  .team, .projects {
     padding: 120px 0;
+  }
+
+  .projects {
+    display: block;
+  }
+
+  .projects .list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .projects .title {
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+  }
+
+  .portfolio {
+    padding: 96px 0 120px;
+  }
+
+  .portfolio .btns-list {
+    margin-bottom: 72px;
   }
 
   .footer {
